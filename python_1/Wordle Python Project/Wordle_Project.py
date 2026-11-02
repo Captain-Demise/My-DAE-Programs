@@ -19,11 +19,14 @@ selected = random.choice(wordle_words)
 # Starts the Game
 print("Welcome to Wordle but harder.")
 
-# Defines Game Over and Guess Number
+# Defines the Guess Number
 gnum =0
+
+# Defines Game over as ending the game on a loss
 def Game_Over():
      print("The word was",selected,".")
      print("Game over. Try again.")
+     sys.exit()
 
 # Allows user to guess the word if they are under 12 guesses
 while gnum < 12:
@@ -45,7 +48,7 @@ while gnum < 12:
                  if secret_char == guess_char:
                      print(f"Match found! '{guess_char}' at space {index + 1}")
 
-# Ivalidates words that exceed 5 letters
+# Ivalidates words that exceed or understeps 5 letters
         elif len(guess) != len(selected):
                      print("That guess is invalid. Try again.")
 
