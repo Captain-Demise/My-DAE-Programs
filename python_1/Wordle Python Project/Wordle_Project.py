@@ -1,4 +1,4 @@
-# Imports the necesary modules.
+# Imports the necesary modules
 import random
 import sys
 
